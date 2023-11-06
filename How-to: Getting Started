@@ -1,0 +1,28 @@
+# at Northwestern, we use Quest b/c it has the computational power we need for RNAseq analysis 
+
+# 1. apply for a Quest allocation 
+# 2. connect to Quest using Terminal - you can do this by searching "terminal" in the finder on both Mac/Windows 
+# 2a. for Windows, you need to download either FastX or PuTTY (I have FastX) to connect to Quest 
+
+  3. connect to Quest using the command: ssh (secure shell) 
+  4. In Terminal, type: ssh aws531@quest.northwestern.edu or netid@northwestern.edu 
+  5. enter netID password 
+  6. enter the directory (like a term for workspace/folder) for your lab's allocation 
+    - for example: cd /projects/e31265 but instead of e31265, you'll put your lab's allocation 
+  7. you will make a directory for yourself - I like to do this by making a directory with my netid 
+    - mkdir (make directory) aws531 (or whatever you want to call it) 
+  8. enter the directory by typing: cd /projects/allocation/netid 
+
+  9. For anything you want to transfer from your own personal computer, use scp 
+  10. I like to open a separate terminal window for this
+    - for example (transfer to personal computer): scp aws531@quest.northwestern.edu: /projects/allocation/netid/subdirectory/filename Path/to/your/Local/file
+    - for example (transfer to Quest): scp Path/to/Local/File aws531@quest.northwestern.edu: /projects/allocation/netid/subdirectory/filename
+
+  Other shortcuts: 
+- cd: change directory 
+- pwd: find current directory 
+- cd .. :go to parent directory (one above it) 
+- mkdir: make directory 
+- rmdir: remove directory 
+- rm: remove 
+- rm *.bam: remove all .bam files or any other type of files (just substitute .bam) 
